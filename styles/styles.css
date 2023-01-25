@@ -231,3 +231,32 @@ html {
   max-width: 1400px;
   margin: 0 auto;
 }
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("../../../../assets/fonts/Merriweather-Italic.woff") format("woff");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Merriweather";
+  src: url("../../../../assets/fonts/Merriweather-Light.woff") format("woff");
+  font-weight: light;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../../../assets/fonts/Montserrat-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../../../assets/fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: bold;
+}
+h1 {
+  font-family: "Merriweather", Arial;
+  font-style: italic;
+}
+
+h2 {
+  font-family: "Montserrat", Arial;
+  font-weight: normal;
+}
