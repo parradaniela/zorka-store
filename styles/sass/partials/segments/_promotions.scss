@@ -1,0 +1,96 @@
+@use '../abstract/variables' as v;
+
+.promotions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    // TODO: Fix the blue container font size (it currently pushes to two lines and creates some overflow at 320px and 978px
+    &__segment {
+        flex-grow: 1;
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        
+        &--red {
+            background-color: v.$color-primary;
+        }
+
+        &--blue {
+            background-color: v.$color-secondary;
+        }
+
+        &--yellow {
+            background-color: v.$color-tertiary;
+        }
+        
+        &--text {
+            text-align: center;
+            padding: 1.5rem;
+            flex-basis: 80%;
+        }
+
+        &--image {
+            flex-basis: 20%;
+            padding: 1.5rem;
+
+            &-red {
+                background: v.$color-primary-dark;
+            }
+
+            &-yellow {
+                background: v.$color-tertiary-dark;
+            }
+
+            &-blue {
+                background: v.$color-secondary-dark;
+            }
+        }
+    }
+}
+
+
+// .promotions__segment {
+//     flex-grow: 1;
+//     display: flex; 
+//     justify-content: space-between;
+//     align-items: center;
+//     text-align: center;
+    
+//     &--red {
+//         background-color: v.$color-primary;
+//     }
+
+//     &--blue {
+//         background-color: v.$color-secondary;
+//     }
+
+//     &--yellow {
+//         background-color: v.$color-tertiary;
+//     }
+    
+//     &--text {
+//         text-align: center;
+//         padding: 1.5rem;
+//         flex-basis: 80%;
+//     }
+
+//     &--image {
+//         flex-basis: 20%;
+//         padding: 1.5rem;
+
+//         &-red {
+//             background: v.$color-primary-dark;
+//         }
+
+//         &-yellow {
+//             background: v.$color-tertiary-dark;
+//         }
+
+//         &-blue {
+//             background: v.$color-secondary-dark;
+//         }
+//     }
+
+// }
