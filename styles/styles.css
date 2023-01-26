@@ -230,7 +230,11 @@ html {
   font-size: 62.5%;
 }
 
-h1, h2, h3, h4, h5, p, button, input {
+body {
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, p, ul, button, input {
   margin: 0;
   padding: 0;
 }
@@ -260,6 +264,7 @@ img {
   text-transform: uppercase;
   border-radius: 4rem;
   background-color: white;
+  border: none;
 }
 
 .flex-col-center {
@@ -280,6 +285,10 @@ img {
 
 .section-padding {
   padding: 5% 0;
+}
+
+.text-align-left {
+  text-align: left;
 }
 
 @font-face {
@@ -315,6 +324,15 @@ h2 {
 
 h3, h4, h5, p, input, a, button {
   font-size: 2rem;
+}
+
+.price {
+  color: #ca7379;
+}
+
+.price-strikethrough {
+  color: #ccc;
+  text-decoration: line-through;
 }
 
 header {
@@ -388,7 +406,6 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
 }
 .promotions__segment--red {
   background-color: #ca7379;
@@ -418,4 +435,33 @@ header {
 }
 .promotions__segment--image-blue {
   background: #738191;
+}
+
+.trending__tabs--headings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.trending__tabs--buttons {
+  width: 100%;
+  background-color: grey;
+}
+
+.list__outfits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+.list__outfits--item-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
 }

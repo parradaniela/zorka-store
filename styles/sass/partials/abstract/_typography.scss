@@ -1,3 +1,5 @@
+@use './variables' as v;
+
 @font-face {
     font-family: 'Merriweather';
     src: url('../../../../assets/fonts/Merriweather-Italic.woff') format('woff');
@@ -35,4 +37,13 @@ h2 {
 
 h3, h4, h5, p, input, a, button {
     font-size: 2rem;
+}
+
+.price {
+    color: v.$color-primary;
+}
+
+.price-strikethrough {
+    color: v.$color-grey;
+    text-decoration: line-through;
 }

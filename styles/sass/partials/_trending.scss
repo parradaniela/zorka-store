@@ -1,0 +1,23 @@
+.trending__tabs--headings {
+    display: grid;
+    // TODO: fix issue of button text going into two lines
+    grid-template-columns: 1fr 1fr;
+}
+
+.trending__tabs--buttons {
+    width: 100%;
+    background-color: grey;
+}
+
+.list__outfits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+
+    &--item-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: space-between;
+    }
+} 
