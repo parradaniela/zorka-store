@@ -24,9 +24,15 @@
 h1 {
     font-family: 'Merriweather', Arial;
     font-style: italic;
+    font-size: 5rem;
 }
 
 h2 {
     font-family: 'Montserrat', Arial;
     font-weight: normal;
+    font-size: 3rem;
+}
+
+h3, h4, h5, p, input, a, button {
+    font-size: 2rem;
 }

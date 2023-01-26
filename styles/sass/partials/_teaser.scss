@@ -1,0 +1,33 @@
+@use './abstract/variables' as v;
+
+.carousel__container {
+    min-height: 70vh;
+    background: url('../assets/images/home3-slideshow1.jpg') no-repeat center;
+    background-size: cover;
+    display: grid;
+    align-content: center;
+
+    &--teaser {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.carousel__content--teaser {
+    gap: 2rem;
+    width: 100%;
+    margin-top: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+
+    &-toggle {
+        align-self: flex-end;
+        padding: 2rem;
+        margin-top: 10%;
+    }
+}
