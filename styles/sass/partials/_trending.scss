@@ -2,11 +2,37 @@
     display: grid;
     // TODO: fix issue of button text going into two lines
     grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    margin-bottom: 1rem;
 }
 
 .trending__tabs--buttons {
     width: 100%;
-    background-color: grey;
+    padding: 1rem 0;
+    position: relative;
+    border: none;
+    background-color: transparent;
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: 50%;
+        height: 2px;
+        background-color: black;
+        bottom: 0;
+        left: 25%;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform .3s linear;
+
+    }
+
+    &:hover::after, 
+    &:focus::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
 }
 
 .list__outfits {

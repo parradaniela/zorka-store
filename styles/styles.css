@@ -310,26 +310,35 @@ img {
   src: url("../../../../assets/fonts/Merriweather-Light.woff") format("woff");
   font-weight: light;
 }
-h2, h4, h5 {
+h2, h4, h5, p, button, input, li, a {
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  font-size: 3rem;
-}
-
-p, button, input, li, a {
-  font-family: "Montserrat", sans-serif;
-  font-weight: normal;
-  font-size: 2rem;
+  color: #212121;
 }
 
 h3, legend {
   font-family: "Merriweather", sans-serif;
   font-style: italic;
-  font-size: 5rem;
+  font-weight: light;
+  color: #212121;
+}
+
+h2 {
+  font-size: 2.5rem;
 }
 
 h3, h4, h5, p, input, a, button {
   font-size: 2rem;
+}
+
+ion-icon {
+  font-size: 3.5rem;
+  color: white;
+  --ionicon-stroke-width: 2rem;
+}
+
+.heading__collection {
+  font-size: 4.5rem;
+  font-style: normal;
 }
 
 .price {
@@ -428,9 +437,18 @@ header {
   -ms-flex-preferred-size: 80%;
       flex-basis: 80%;
 }
+.promotions__segment--text p {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 1.5rem;
+  font-weight: light;
+}
 .promotions__segment--image {
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
   padding: 1.5rem;
 }
 .promotions__segment--image-red {
@@ -446,11 +464,40 @@ header {
 .trending__tabs--headings {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  margin-bottom: 1rem;
 }
 
 .trending__tabs--buttons {
   width: 100%;
-  background-color: grey;
+  padding: 1rem 0;
+  position: relative;
+  border: none;
+  background-color: transparent;
+}
+.trending__tabs--buttons::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 50%;
+  height: 2px;
+  background-color: black;
+  bottom: 0;
+  left: 25%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+.trending__tabs--buttons:hover::after, .trending__tabs--buttons:focus::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
 .list__outfits {

@@ -24,27 +24,35 @@
 }
 
 
-h2, h4, h5 {
+h2, h4, h5, p, button, input, li, a {
     font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 3rem;
-}
-
-p, button, input, li, a {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: normal;
-    font-size: 2rem;
+    color: v.$color-black;
 }
 
 h3, legend {
     font-family: 'Merriweather', sans-serif;
     font-style: italic;
-    font-size: 5rem;
+    font-weight: light;
+    color: v.$color-black;
 }
 
+h2 {
+    font-size: 2.5rem;
+}
 
 h3, h4, h5, p, input, a, button {
     font-size: 2rem;
+}
+
+ion-icon {
+    font-size: 3.5rem;
+    color: white;
+    --ionicon-stroke-width: 2rem;
+}
+
+.heading__collection {
+    font-size: 4.5rem;
+    font-style: normal;
 }
 
 .price {
