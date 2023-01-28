@@ -1,6 +1,17 @@
 @use './variables' as v;
 
 @font-face {
+    font-family: 'Montserrat'; 
+    src: url('../../../../assets/fonts/Montserrat-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../../../assets/fonts/Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+}
+
+@font-face {
     font-family: 'Merriweather';
     src: url('../../../../assets/fonts/Merriweather-Italic.woff') format('woff');
     font-style: italic;
@@ -12,28 +23,25 @@
     font-weight: light;
 }
 
-@font-face {
-    font-family: 'Montserrat'; 
-    src: url('../../../../assets/fonts/Montserrat-Regular.woff') format('woff');
-}
 
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../../../../assets/fonts/Montserrat-Bold.woff') format('woff');
+h2, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
+    font-size: 3rem;
 }
 
-h1 {
-    font-family: 'Merriweather', Arial;
+p, button, input, li, a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+h3, legend {
+    font-family: 'Merriweather', sans-serif;
     font-style: italic;
     font-size: 5rem;
 }
 
-h2 {
-    font-family: 'Montserrat', Arial;
-    font-weight: normal;
-    font-size: 3rem;
-}
 
 h3, h4, h5, p, input, a, button {
     font-size: 2rem;
