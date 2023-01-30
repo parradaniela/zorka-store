@@ -1,14 +1,22 @@
+@use './abstract/variables' as v;
+
 .trending__tabs--headings {
-    display: grid;
-    // TODO: fix issue of button text going into two lines
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
-    margin-bottom: 1rem;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: v.$gap-small 3rem;
+    // margin-bottom: v.$gap-small;
+    // grid-template-rows: min-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 5%;
 }
 
 .trending__tabs--buttons {
     width: 100%;
-    padding: 1rem 0;
+    text-align: left;
+    padding: v.$gap-small 0;
     position: relative;
     border: none;
     background-color: transparent;
@@ -17,11 +25,11 @@
         content: '';
         position: absolute;
         display: inline-block;
-        width: 50%;
+        width: 5rem;
         height: 2px;
         background-color: black;
         bottom: 0;
-        left: 25%;
+        left: 0;
         transform: scaleX(0);
         transform-origin: bottom right;
         transition: transform .3s linear;
@@ -37,13 +45,22 @@
 
 .list__outfits {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
+    gap: v.$gap-small;
+    grid-auto-flow: column;
+    grid-auto-columns: 95%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
 
-    &--item-buttons {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: space-between;
+    &--item {
+        padding: 2rem;
+        display: grid;
+        grid-template-rows: min-content;
+        gap: v.$gap-small;
+
+        &-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
-} 
+}  

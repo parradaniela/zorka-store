@@ -1,3 +1,11 @@
+@use './variables' as v;
+
+.wrapper {
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
 .flex-col-center {
     display: flex;
     flex-direction: column;
@@ -11,4 +19,56 @@
 
 .text-align-left {
     text-align: left;
+}
+
+.snaps-inline {
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: v.$gap-small;
+
+    > * {
+        scroll-snap-align: start;
+    }
+}
+
+.btn {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    border-radius: 4rem;
+    background-color: v.$color-primary;
+    color: v.$color-white;
+    border: none;
+
+    &:is(:hover, :focus) {
+        background-color: v.$color-black;
+        color: v.$color-white;
+    }
+    
+    &-white {
+        background-color: v.$color-white;
+        color: v.$color-black;
+    }
+
+    &__product {
+        background: transparent;
+        border: 1px solid v.$color-grey-dark;
+        border-radius: 50%;
+        padding: 2px;
+        
+        &:is(:hover, :focus-within) {
+            border: 1px solid v.$color-primary;
+        }
+        
+        &:is(:hover, :focus-within) .icon-grey {
+            color: v.$color-primary; 
+        }
+    }
+
+
+}
+
+.icon-grey{
+    color: v.$color-grey-dark;
+    font-size: 3rem;
+    margin: 3px 2px 0;
 }

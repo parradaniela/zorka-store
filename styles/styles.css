@@ -259,14 +259,6 @@ img {
   margin: 0 auto;
 }
 
-.btn {
-  padding: 1rem 2rem;
-  text-transform: uppercase;
-  border-radius: 4rem;
-  background-color: white;
-  border: none;
-}
-
 .flex-col-center {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -291,6 +283,51 @@ img {
   text-align: left;
 }
 
+.snaps-inline {
+  -ms-scroll-snap-type: inline mandatory;
+      scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 1rem;
+}
+.snaps-inline > * {
+  scroll-snap-align: start;
+}
+
+.btn {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  border-radius: 4rem;
+  background-color: #ca7379;
+  color: #fff;
+  border: none;
+}
+.btn:is(:hover, :focus) {
+  background-color: #212121;
+  color: #fff;
+}
+.btn-white {
+  background-color: #fff;
+  color: #212121;
+}
+.btn__product {
+  background: transparent;
+  border: 1px solid #444;
+  border-radius: 50%;
+  padding: 2px;
+}
+.btn__product:is(:hover, :focus-within) {
+  border: 1px solid #ca7379;
+}
+.btn__product:is(:hover, :focus-within) .icon-grey {
+  color: #ca7379;
+}
+
+.icon-grey {
+  color: #444;
+  font-size: 3rem;
+  margin: 3px 2px 0;
+}
+
 @font-face {
   font-family: "Montserrat";
   src: url("../../../../assets/fonts/Montserrat-Regular.woff") format("woff");
@@ -313,17 +350,25 @@ img {
 h2, h4, h5, p, button, input, li, a {
   font-family: "Montserrat", sans-serif;
   color: #212121;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 h3, legend {
   font-family: "Merriweather", sans-serif;
   font-style: italic;
   font-weight: light;
+  letter-spacing: 5px;
   color: #212121;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 h2 {
   font-size: 2.5rem;
+  letter-spacing: 5px;
+  line-height: 2;
+  text-transform: uppercase;
 }
 
 h3, h4, h5, p, input, a, button {
@@ -334,6 +379,8 @@ ion-icon {
   font-size: 3.5rem;
   color: white;
   --ionicon-stroke-width: 2rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .heading__collection {
@@ -348,6 +395,7 @@ ion-icon {
 .price-strikethrough {
   color: #ccc;
   text-decoration: line-through;
+  font-size: 1.8rem;
 }
 
 header {
@@ -462,14 +510,22 @@ header {
 }
 
 .trending__tabs--headings {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5px;
-  margin-bottom: 1rem;
+  gap: 2rem;
+  padding: 1rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 5%;
 }
 
 .trending__tabs--buttons {
   width: 100%;
+  text-align: left;
   padding: 1rem 0;
   position: relative;
   border: none;
@@ -479,11 +535,11 @@ header {
   content: "";
   position: absolute;
   display: inline-block;
-  width: 50%;
+  width: 5rem;
   height: 2px;
   background-color: black;
   bottom: 0;
-  left: 25%;
+  left: 0;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transform-origin: bottom right;
@@ -502,19 +558,27 @@ header {
 
 .list__outfits {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5px;
+  gap: 1rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 95%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+.list__outfits--item {
+  padding: 2rem;
+  display: grid;
+  grid-template-rows: -webkit-min-content;
+  grid-template-rows: min-content;
+  gap: 1rem;
 }
 .list__outfits--item-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: space-between;
-      -ms-flex-align: space-between;
-          align-items: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
