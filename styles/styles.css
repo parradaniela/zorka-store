@@ -292,6 +292,14 @@ img {
   scroll-snap-align: start;
 }
 
+.block {
+  display: block;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 .btn {
   font-size: 1.5rem;
   padding: 1rem 2rem;
@@ -362,13 +370,14 @@ h3, legend {
   color: #212121;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  line-height: 1.5;
 }
 
 h2 {
   font-size: 2.5rem;
   letter-spacing: 5px;
-  line-height: 2;
   text-transform: uppercase;
+  line-height: 1.5;
 }
 
 h3, h4, h5, p, input, a, button {
@@ -403,9 +412,9 @@ header {
 }
 
 .carousel__container {
-  min-height: 70vh;
-  background: url("../assets/images/home6-slideshow3.jpg") no-repeat center;
+  background: url("../assets/images/slideshow/home6-slideshow3.jpg") no-repeat center;
   background-size: cover;
+  min-height: 70vh;
   display: grid;
   -ms-flex-line-pack: center;
       align-content: center;
@@ -581,4 +590,66 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.banners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.banners__card {
+  min-height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.banners__card p {
+  color: #fff;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+.banners__card-left {
+  background: url("../assets/images/banners/home-bg-1.jpg") no-repeat center;
+  background-size: cover;
+}
+.banners__card-left p {
+  text-align: left;
+  -webkit-transform: translateX(35%);
+          transform: translateX(35%);
+}
+.banners__card-right {
+  background: url("../assets/images/banners/home-bg-2.jpg") no-repeat center;
+  background-size: cover;
+}
+.banners__card-right .banners__card-container {
+  border: 1px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.banners__card-right p {
+  text-align: justify;
+}
+.banners__card-right .block {
+  font-size: 1.6rem;
+}
+.banners__card-right img {
+  border-right: 1px solid #fff;
+  padding: 1rem;
 }

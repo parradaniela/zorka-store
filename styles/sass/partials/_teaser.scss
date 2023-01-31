@@ -1,9 +1,8 @@
 @use './abstract/variables' as v;
 
 .carousel__container {
+    @include v.background-img('../assets/images/slideshow/home6-slideshow3.jpg');
     min-height: 70vh;
-    background: url('../assets/images/home6-slideshow3.jpg') no-repeat center;
-    background-size: cover;
     display: grid;
     align-content: center;
 

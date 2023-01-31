@@ -1,0 +1,56 @@
+@use '../abstract/variables' as v;
+
+.banners {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.banners__card {
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        color: v.$color-white;
+        padding: v.$gap-small;
+        text-transform: uppercase;
+        font-size: 3rem;
+    }
+    
+    &-left {
+        @include v.background-img('../assets/images/banners/home-bg-1.jpg');
+
+        p {
+            text-align: left;
+            transform: translateX(35%);
+        }
+
+    }
+
+    &-right {
+        @include v.background-img('../assets/images/banners/home-bg-2.jpg');
+
+        .banners__card-container {
+            border: 1px solid v.$color-white;
+            display: flex;
+            justify-content: center;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        .block {
+            font-size: 1.6rem;
+        }
+
+        img {
+            border-right: 1px solid v.$color-white;
+            padding: v.$gap-small;
+        }
+    }
+}
+
+//TODO: Add hover state - maybe background image blurs, but text doesnt?

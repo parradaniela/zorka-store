@@ -12,3 +12,8 @@ $color-grey: #ccc;
 
 $gap-small: 1rem;
 $spacing-small: 5px;
+
+@mixin background-img($url) {
+    background: url($url) no-repeat center;
+    background-size: cover;
+}

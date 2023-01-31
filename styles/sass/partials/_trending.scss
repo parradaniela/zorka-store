@@ -1,12 +1,8 @@
 @use './abstract/variables' as v;
 
 .trending__tabs--headings {
-    // display: grid;
-    // grid-template-columns: 1fr 1fr;
     gap: 2rem;
     padding: v.$gap-small 3rem;
-    // margin-bottom: v.$gap-small;
-    // grid-template-rows: min-content;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
