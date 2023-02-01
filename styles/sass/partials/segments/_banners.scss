@@ -42,14 +42,15 @@
             text-align: justify;
         }
 
-        .block {
-            font-size: 1.6rem;
-        }
-
         img {
             border-right: 1px solid v.$color-white;
             padding: v.$gap-small;
         }
+        
+        .block {
+            font-size: 1.6rem;
+        }
+
     }
 }
 

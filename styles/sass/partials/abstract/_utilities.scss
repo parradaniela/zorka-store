@@ -6,6 +6,10 @@
     margin: 0 auto;
 }
 
+.rel-container {
+    position: relative;
+}
+
 .flex-col-center {
     display: flex;
     flex-direction: column;
@@ -21,7 +25,9 @@
     text-align: left;
 }
 
-.snaps-inline {
+.scroll__inline-snap {
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
     scroll-snap-type: inline mandatory;
     scroll-padding-inline: v.$gap-small;
 

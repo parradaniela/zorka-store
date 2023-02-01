@@ -122,7 +122,7 @@
                     </li>
                 </ul>
                 <div class="trending__tabs--content">
-                    <ul class="list__outfits snaps-inline">
+                    <ul class="list__outfits scroll__inline-snap">
                         <li class="list__outfits--item">
                             <div>
                                 <img src="./assets/images/products/product-img-1.jpg" alt="trending outfit">
@@ -230,59 +230,60 @@
             <div class="wrapper">
                 <h2 class="heading__section">Sale Off</h2>
                 <h3 class="heading__section--subheading">Up to 50%</h3>
-                <ul class="list__outfits">
+                <ul class="list__outfits rel-container">
                     <li class="list__outfits--item">
-                        <img src="#" alt="Hooded Bomber Jacket">
+                        <div class="rel-container">
+                            <img src="./assets/images/products/product-img-5.jpg" alt="Hooded Bomber Jacket">
+                            <span class="sticker sticker--red">-30%</span>
+                        </div>
                         <h5>Hooded Bomber Jacket</h5>
                         <div>
                             <p class="price">100.99 USD</p>
                             <p class="price-strikethrough">189.99 USD</p>
                         </div>
-                        <div>
-                            <button>Add to Cart</button>
-                            <button>Share</button>
-                            <button>Like</button>
+                        <div class="list__outfits--item-buttons">
+                            <button class="btn">Add to cart</button>
+                            <div>
+                                <button class="btn__product">
+                                    <ion-icon name="repeat-sharp" class="icon-grey"></ion-icon>
+                                </button>
+                                <button class="btn__product">
+                                    <ion-icon name="heart-outline" class="icon-grey"></ion-icon>
+                                </button>
+                            </div>
+                            
                         </div>
                     </li>
                     <li class="list__outfits--item">
-                        <img src="#" alt="Structured Collarless Coat">
+                        <div class="rel-container">
+                            <img src="./assets/images/products/product-img-6.jpg" alt="Structured Collarless Coat">
+                            <span class="sticker sticker--red">-50%</span>
+                        </div>
                         <h5>Structured Collarless Coat</h5>
                         <div>
                             <p class="price">100.99 USD</p>
                             <p class="price-strikethrough">189.99 USD</p>
                         </div>
-                        <div>
-                            <button>Add to Cart</button>
-                            <button>Share</button>
-                            <button>Like</button>
+                        <div class="list__outfits--item-buttons">
+                            <button class="btn">Add to cart</button>
+                            <div>
+                                <button class="btn__product">
+                                    <ion-icon name="repeat-sharp" class="icon-grey"></ion-icon>
+                                </button>
+                                <button class="btn__product">
+                                    <ion-icon name="heart-outline" class="icon-grey"></ion-icon>
+                                </button>
+                            </div>
                         </div>
                     </li>
-                    <li class="list__outfits--item">
-                        <img src="#" alt="Houndstooth Wool Coat">
-                        <h5>Houndstooth Wool Coat</h5>
-                        <div>
-                            <p class="price">100.99 USD</p>
-                            <p class="price-strikethrough">189.99 USD</p>
-                        </div>
-                        <div>
-                            <button>Add to Cart</button>
-                            <button>Share</button>
-                            <button>Like</button>
-                        </div>
-                    </li>
-                    <li class="list__outfits--item">
-                        <img src="#" alt="Coat with Wraparound Collar">
-                        <h5>Coat with Wraparound Collar</h5>
-                        <div>
-                            <p class="price">100.99 USD</p>
-                            <p class="price-strikethrough">189.99 USD</p>
-                        </div>
-                        <div>
-                            <button>Add to Cart</button>
-                            <button>Share</button>
-                            <button>Like</button>
-                        </div>
-                    </li>
+                    <div class="carousel__buttons">
+                        <button class="btn__product btn__product-back">
+                            <ion-icon name="chevron-back-outline" class="icon-grey"></ion-icon>
+                        </button>
+                        <button class="btn__product btn__product-forward">
+                            <ion-icon name="chevron-forward-outline" class="icon-grey"></ion-icon>
+                        </button>
+                    </div>
                 </ul>
             </div> <!-- END .wrapper -->
         </section>

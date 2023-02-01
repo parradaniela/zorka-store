@@ -39,13 +39,12 @@
     }
 }
 
+//TODO: Move this to either global or another partial that handles galleries
 .list__outfits {
     display: grid;
     gap: v.$gap-small;
     grid-auto-flow: column;
-    grid-auto-columns: 95%;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
+    grid-auto-columns: max-content;
 
     &--item {
         padding: 2rem;

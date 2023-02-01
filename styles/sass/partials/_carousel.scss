@@ -1,0 +1,22 @@
+@use './abstract/variables' as v;
+
+.carousel__buttons .btn__product {
+    border: 3px solid v.$color-grey;
+    background-color: v.$color-white;
+    position: absolute;
+    top: 30%;
+    transform: scale(0.7);
+
+    &:is(:hover, :focus) {
+        transform: scale(1);
+    }
+
+    &-back {
+        left: -.5rem;
+    }
+
+    &-forward {
+        right: -.5rem;
+    }
+}
+

@@ -1,3 +1,5 @@
+@use '../abstract/variables' as v;
+
 html {
     font-size: 62.5%;
 }
@@ -23,3 +25,17 @@ img {
     object-fit: cover;
     max-width: 100%;
 }
+
+.sticker {
+    font-size: 1.8rem;
+    padding: 2rem v.$gap-small;
+    border-radius: 50%;
+    position: absolute;
+    bottom: v.$gap-small;
+    right: v.$gap-small;
+    color: v.$color-white;
+
+    &--red {
+        background-color: v.$color-primary;
+    }
+} 

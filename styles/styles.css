@@ -253,10 +253,27 @@ img {
   max-width: 100%;
 }
 
+.sticker {
+  font-size: 1.8rem;
+  padding: 2rem 1rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  color: #fff;
+}
+.sticker--red {
+  background-color: #ca7379;
+}
+
 .wrapper {
   width: 95%;
   max-width: 1400px;
   margin: 0 auto;
+}
+
+.rel-container {
+  position: relative;
 }
 
 .flex-col-center {
@@ -283,12 +300,14 @@ img {
   text-align: left;
 }
 
-.snaps-inline {
+.scroll__inline-snap {
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
   -ms-scroll-snap-type: inline mandatory;
       scroll-snap-type: inline mandatory;
   scroll-padding-inline: 1rem;
 }
-.snaps-inline > * {
+.scroll__inline-snap > * {
   scroll-snap-align: start;
 }
 
@@ -569,9 +588,8 @@ header {
   display: grid;
   gap: 1rem;
   grid-auto-flow: column;
-  grid-auto-columns: 95%;
-  overflow-x: auto;
-  overscroll-behavior-inline: contain;
+  grid-auto-columns: -webkit-max-content;
+  grid-auto-columns: max-content;
 }
 .list__outfits--item {
   padding: 2rem;
@@ -646,10 +664,29 @@ header {
 .banners__card-right p {
   text-align: justify;
 }
-.banners__card-right .block {
-  font-size: 1.6rem;
-}
 .banners__card-right img {
   border-right: 1px solid #fff;
   padding: 1rem;
+}
+.banners__card-right .block {
+  font-size: 1.6rem;
+}
+
+.carousel__buttons .btn__product {
+  border: 3px solid #ccc;
+  background-color: #fff;
+  position: absolute;
+  top: 30%;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+.carousel__buttons .btn__product:is(:hover, :focus) {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.carousel__buttons .btn__product-back {
+  left: -0.5rem;
+}
+.carousel__buttons .btn__product-forward {
+  right: -0.5rem;
 }
