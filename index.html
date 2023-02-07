@@ -132,10 +132,10 @@
                             <div class="list__outfits--item-buttons">
                                 <button class="btn">Add to cart</button>
                                 <div>
-                                    <button class="btn__product">
+                                    <button class="btn__product" aria-label="Toggle image">
                                         <ion-icon name="repeat-sharp" class="icon-grey"></ion-icon>
                                     </button>
-                                    <button class="btn__product">
+                                    <button class="btn__product" aria-label="Add to wishlist">
                                         <ion-icon name="heart-outline" class="icon-grey"></ion-icon>
                                     </button>
                                 </div>
@@ -151,10 +151,10 @@
                             <div class="list__outfits--item-buttons">
                                 <button class="btn">Add to cart</button>
                                 <div>
-                                    <button class="btn__product">
+                                    <button class="btn__product" aria-label="Toggle image">
                                         <ion-icon name="repeat-sharp" class="icon-grey"></ion-icon>
                                     </button>
-                                    <button class="btn__product">
+                                    <button class="btn__product" aria-label="Add to wishlist">
                                         <ion-icon name="heart-outline" class="icon-grey"></ion-icon>
                                     </button>
                                 </div>
@@ -169,10 +169,10 @@
                             <div class="list__outfits--item-buttons">
                                 <button class="btn">Add to cart</button>
                                 <div>
-                                    <button class="btn__product">
+                                    <button class="btn__product" aria-label="Toggle image">
                                         <ion-icon name="repeat-sharp" class="icon-grey"></ion-icon>
                                     </button>
-                                    <button class="btn__product">
+                                    <button class="btn__product" aria-label="Add to wishlist">
                                         <ion-icon name="heart-outline" class="icon-grey"></ion-icon>
                                     </button>
                                 </div>
@@ -187,10 +187,10 @@
                             <div class="list__outfits--item-buttons">
                                 <button class="btn">Add to cart</button>
                                 <div>
-                                    <button class="btn__product">
+                                    <button class="btn__product" aria-label="Toggle image">
                                         <ion-icon name="repeat-sharp" class="icon-grey"></ion-icon>
                                     </button>
-                                    <button class="btn__product">
+                                    <button class="btn__product" aria-label="Add to wishlist">
                                         <ion-icon name="heart-outline" class="icon-grey"></ion-icon>
                                     </button>
                                 </div>
@@ -244,10 +244,10 @@
                         <div class="list__outfits--item-buttons">
                             <button class="btn">Add to cart</button>
                             <div>
-                                <button class="btn__product">
+                                <button class="btn__product" aria-label="Toggle image">
                                     <ion-icon name="repeat-sharp" class="icon-grey"></ion-icon>
                                 </button>
-                                <button class="btn__product">
+                                <button class="btn__product" aria-label="Add to wishlist">
                                     <ion-icon name="heart-outline" class="icon-grey"></ion-icon>
                                 </button>
                             </div>
@@ -267,20 +267,20 @@
                         <div class="list__outfits--item-buttons">
                             <button class="btn">Add to cart</button>
                             <div>
-                                <button class="btn__product">
+                                <button class="btn__product" aria-label="Toggle image">
                                     <ion-icon name="repeat-sharp" class="icon-grey"></ion-icon>
                                 </button>
-                                <button class="btn__product">
+                                <button class="btn__product" aria-label="Add to wishlist">
                                     <ion-icon name="heart-outline" class="icon-grey"></ion-icon>
                                 </button>
                             </div>
                         </div>
                     </li>
                     <div class="carousel__buttons">
-                        <button class="btn__product btn__product-back">
+                        <button class="btn__product btn__product-back" aria-label="View previous">
                             <ion-icon name="chevron-back-outline" class="icon-grey"></ion-icon>
                         </button>
-                        <button class="btn__product btn__product-forward">
+                        <button class="btn__product btn__product-forward" aria-label="View next">
                             <ion-icon name="chevron-forward-outline" class="icon-grey"></ion-icon>
                         </button>
                     </div>
@@ -288,62 +288,140 @@
             </div> <!-- END .wrapper -->
         </section>
 
-        <section class="recommended">
-            <div class="wrapper">
-                <div>
-                    <h4>New-in</h4>
+        <section class="recommended section-padding">
+            <div class="wrapper card">
+                <div class="card__container">
+                    <h4>New-In</h4>
                     <ul>
-                        <li>
+                        <li class="card__item">
                             <div>
-                                <img src="#" alt="Parka with faux fur hood">
+                                <img src="./assets/images/small/new-in-img-1.jpg" alt="Oversize Bomber Jacket">
                             </div>
-                            <div>
-                                <h5>Parka with Faux Fur hood</h5>
+                            <div class="card__item-details">
+                                <h5>Oversize Bomber Jacket</h5>
                                 <p class="price">189.99 USD</p>
-                                <div>
-                                    <button>cart</button>
-                                    <button>share</button>
-                                    <button>like</button>
+                                <div class="card__buttons">
+                                    <button class="btn__product" aria-label="Add to shopping cart">
+                                        <ion-icon name="cart-outline" class="icon-grey"></ion-icon>
+                                    </button>
+                                    <button class="btn__product" aria-label="Toggle image">
+                                        <ion-icon name="repeat-sharp" class="icon-grey"></ion-icon>
+                                    </button>
+                                    <button class="btn__product" aria-label="Add to wishlist">
+                                        <ion-icon name="heart-outline" class="icon-grey"></ion-icon>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card__item">
+                            <div>
+                                <img src="./assets/images/small/new-in-img-2.jpg" alt="Bomber Jacket">
+                            </div>
+                            <div class="card__item-details">
+                                <h5>Bomber Jacket</h5>
+                                <p class="price">189.99 USD</p>
+                                <div class="card__buttons">
+                                    <button class="btn__product" aria-label="Add to shopping cart">
+                                        <ion-icon name="cart-outline" class="icon-grey"></ion-icon>
+                                    </button>
+                                    <button class="btn__product" aria-label="Toggle image">
+                                        <ion-icon name="repeat-sharp" class="icon-grey"></ion-icon>
+                                    </button>
+                                    <button class="btn__product" aria-label="Add to wishlist">
+                                        <ion-icon name="heart-outline" class="icon-grey"></ion-icon>
+                                    </button>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </div>
 
-                <div>
+                <div class="card__container">
                     <h4>Featured</h4>
                     <ul>
-                        <li>
+                        <li class="card__item">
                             <div>
-                                <img src="#" alt="Parka with faux fur hood">
+                                <img src="./assets/images/small/featured-img-1.jpg" alt="Parka with faux fur hood">
                             </div>
-                            <div>
-                                <h5>Parka with Faux Fur hood</h5>
+                            <div class="card__item-details">
+                                <h5>Handmade Flared Jacket</h5>
                                 <p class="price">189.99 USD</p>
-                                <div>
-                                    <button>cart</button>
-                                    <button>share</button>
-                                    <button>like</button>
+                                <div class="card__buttons">
+                                    <button class="btn__product" aria-label="Add to shopping cart">
+                                        <ion-icon name="cart-outline" class="icon-grey"></ion-icon>
+                                    </button>
+                                    <button class="btn__product" aria-label="Toggle image">
+                                        <ion-icon name="repeat-sharp" class="icon-grey"></ion-icon>
+                                    </button>
+                                    <button class="btn__product" aria-label="Add to wishlist">
+                                        <ion-icon name="heart-outline" class="icon-grey"></ion-icon>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card__item">
+                            <div>
+                                <img src="./assets/images/small/featured-img-2.jpg" alt="Bomber Jacket">
+                            </div>
+                            <div class="card__item-details">
+                                <h5>Short Knit Coat with Belt</h5>
+                                <p class="price">189.99 USD</p>
+                                <div class="card__buttons">
+                                    <button class="btn__product" aria-label="Add to shopping cart">
+                                        <ion-icon name="cart-outline" class="icon-grey"></ion-icon>
+                                    </button>
+                                    <button class="btn__product" aria-label="Toggle image">
+                                        <ion-icon name="repeat-sharp" class="icon-grey"></ion-icon>
+                                    </button>
+                                    <button class="btn__product" aria-label="Add to wishlist">
+                                        <ion-icon name="heart-outline" class="icon-grey"></ion-icon>
+                                    </button>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </div>
 
-                <div>
+                <div class="card__container">
                     <h4>Top Rated</h4>
                     <ul>
-                        <li>
+                        <li class="card__item">
                             <div>
-                                <img src="#" alt="Parka with faux fur hood">
+                                <img src="./assets/images/small/toprated-img-1.jpg" alt="Parka with faux fur hood">
                             </div>
-                            <div>
-                                <h5>Parka with Faux Fur hood</h5>
+                            <div class="card__item-details">
+                                <h5>Oversize Bomber Jacket</h5>
                                 <p class="price">189.99 USD</p>
-                                <div>
-                                    <button>cart</button>
-                                    <button>share</button>
-                                    <button>like</button>
+                                <div class="card__buttons">
+                                    <button class="btn__product" aria-label="Add to shopping cart">
+                                        <ion-icon name="cart-outline" class="icon-grey"></ion-icon>
+                                    </button>
+                                    <button class="btn__product" aria-label="Toggle image">
+                                        <ion-icon name="repeat-sharp" class="icon-grey"></ion-icon>
+                                    </button>
+                                    <button class="btn__product" aria-label="Add to wishlist">
+                                        <ion-icon name="heart-outline" class="icon-grey"></ion-icon>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card__item">
+                            <div>
+                                <img src="./assets/images/small/toprated-img-2.jpg" alt="Handmade Flared Jacket">
+                            </div>
+                            <div class="card__item-details">
+                                <h5>Handmade Flared Jacket</h5>
+                                <p class="price">189.99 USD</p>
+                                <div class="card__buttons">
+                                    <button class="btn__product" aria-label="Add to shopping cart">
+                                        <ion-icon name="cart-outline" class="icon-grey"></ion-icon>
+                                    </button>
+                                    <button class="btn__product" aria-label="Toggle image">
+                                        <ion-icon name="repeat-sharp" class="icon-grey"></ion-icon>
+                                    </button>
+                                    <button class="btn__product" aria-label="Add to wishlist">
+                                        <ion-icon name="heart-outline" class="icon-grey"></ion-icon>
+                                    </button>
                                 </div>
                             </div>
                         </li>

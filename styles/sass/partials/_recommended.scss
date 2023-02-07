@@ -1,0 +1,55 @@
+@use './abstract/variables' as v;
+
+.recommended {
+    background: v.$color-grey-light;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        background: v.$color-white;
+        padding: 2rem;
+
+        h4 {
+            font-size: 3rem;
+            text-align: left;
+            padding-bottom: v.$gap-small;
+            margin-bottom: 2rem;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                display: inline-block;
+                width: 60%;
+                height: 2px;
+                background-color: black;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+
+    &__item {
+        display: grid;
+        grid-auto-flow: row;
+        gap: 3rem;
+        margin-bottom: 2rem;
+
+        &-details {
+            display: flex;
+            flex-direction: column;
+            gap: v.$gap-small;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        gap: v.$gap-small;
+    }
+}
