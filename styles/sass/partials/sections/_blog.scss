@@ -1,0 +1,22 @@
+@use '../abstract/variables' as v;
+
+.blogpost {
+    padding: v.$gap-small;
+    gap: v.$gap-small;
+
+    &--desc {
+        font-size: 1.6rem;
+    }
+
+    &--link {
+        color: v.$color-primary;
+
+        &:is(:hover, :focus) {
+            color: v.$color-tertiary;
+        }
+    }
+
+    article {
+        gap: v.$gap-small;
+    }
+}

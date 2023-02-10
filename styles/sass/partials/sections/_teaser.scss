@@ -1,4 +1,4 @@
-@use './abstract/variables' as v;
+@use '../abstract/variables' as v;
 
 .carousel__container {
     @include v.background-img('../assets/images/slideshow/home6-slideshow3.jpg');

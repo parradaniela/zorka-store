@@ -3,10 +3,12 @@
 @use './partials/abstract/variables';
 @use './partials/abstract/utilities';
 @use './partials/abstract/typography';
-@use './partials/header';
-@use './partials/teaser';
+@use './partials/sections/header';
+@use './partials/sections/teaser';
 @use './partials/segments/promotions';
-@use './partials/trending';
+@use './partials/sections/trending';
 @use './partials/segments/banners';
 @use './partials/carousel';
-@use './partials/recommended';
+@use './partials/sections/recommended';
+@use './partials/sections/blog';
+@use './partials/sections/subscription';

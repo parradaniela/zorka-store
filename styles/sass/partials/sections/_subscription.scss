@@ -1,0 +1,55 @@
+@use '../abstract/variables' as v;
+
+.subscription__container {
+    background-image: url('../assets/images/banners/home-bg-3.jpg');
+    background-position: center;
+    color: v.$color-white;
+    padding: 20% 0;
+
+    h2, legend {
+        color: v.$color-white;
+    }
+
+    .subscription--border {
+        border: 1px solid v.$color-white;
+        padding: 2rem v.$gap-small;
+        gap: v.$gap-small;
+    }
+
+    input {
+        padding: 1rem 2rem;
+        border-radius: 4rem;
+        margin: 2rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn:is(:hover, :focus) {
+        background: v.$color-tertiary;
+    }
+}
+
+.partnerships {
+    padding: 3rem;
+    gap: 3rem;
+
+    img {
+        width: 10rem;
+    }
+}
+
+.updates {
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+
+    &__container {
+        border: 1px solid v.$color-primary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+        flex-basis: 100%;
+    }
+}
