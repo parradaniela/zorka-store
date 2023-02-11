@@ -844,3 +844,29 @@ header {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
 }
+
+footer {
+  background-color: #fafafa;
+}
+
+.footer__navigation-segment {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+.footer__navigation-segment h3 {
+  margin: 2rem 0;
+  text-transform: uppercase;
+}
+.footer__navigation-segment a {
+  text-transform: uppercase;
+}
+.footer__navigation-segment a:is(:hover, :focus) {
+  color: #ca7379;
+}
+.footer__navigation-segment ul, .footer__navigation-segment address {
+  gap: 1rem;
+}
+
+.copyright {
+  gap: 2rem;
+}

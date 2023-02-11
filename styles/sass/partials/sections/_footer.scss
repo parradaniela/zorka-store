@@ -1,0 +1,31 @@
+@use '../abstract/variables' as v;
+
+footer {
+    background-color: v.$color-grey-light;
+}
+
+.footer__navigation-segment {
+    flex-basis: 100%;
+    
+    h3 {
+        margin: 2rem 0;
+        text-transform: uppercase;
+    }
+
+    a {
+        text-transform: uppercase;
+
+        &:is(:hover, :focus) {
+            color: v.$color-primary;
+        }
+    }
+
+    ul,address {
+        gap: v.$gap-small;
+    }
+}
+
+.copyright {
+    gap: 2rem;
+    //TODO: when the images and text go onto one line, change justify content to space between
+}
