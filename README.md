@@ -6,10 +6,10 @@ A PSD Layout conversion project, just started! I plan to design this with a mobi
 
 ## Live site
 
-Not deployed yet :) Check back for updates!
+Check out the live site here: https://zorka-store.netlify.app/
 
 ## Designed with 
 
-- HTML, CSS, JS
+- HTML, SCSS, JS
 - Mobile-first design
 - CSS Grid
