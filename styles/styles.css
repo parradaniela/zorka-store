@@ -493,6 +493,18 @@ header {
   padding: 2rem;
   margin-top: 10%;
 }
+.carousel__content--teaser-toggle button {
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 5px;
+}
+.carousel__content--teaser-toggle button:not(:last-child) {
+  margin-right: 5px;
+}
+.carousel__content--teaser-toggle button:is(:hover, :focus, :active) {
+  background-color: #fff;
+}
 
 .promotions {
   display: -webkit-box;
@@ -826,7 +838,7 @@ header {
 .updates {
   gap: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 .updates__container {
   border: 1px solid #ca7379;
@@ -840,7 +852,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   gap: 2rem;
-  padding: 2rem;
+  padding: 1rem;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
 }
@@ -849,24 +861,53 @@ footer {
   background-color: #fafafa;
 }
 
-.footer__navigation-segment {
+.copyright {
+  gap: 2rem;
+}
+
+.accordion-item {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
 }
-.footer__navigation-segment h3 {
+.accordion-item h3 {
   margin: 2rem 0;
   text-transform: uppercase;
 }
-.footer__navigation-segment a {
+.accordion-item a {
   text-transform: uppercase;
 }
-.footer__navigation-segment a:is(:hover, :focus) {
+.accordion-item a:is(:hover, :focus) {
   color: #ca7379;
 }
-.footer__navigation-segment ul, .footer__navigation-segment address {
+.accordion-item ul, .accordion-item address {
   gap: 1rem;
 }
 
-.copyright {
-  gap: 2rem;
+.accordion__heading {
+  position: relative;
+  cursor: pointer;
+}
+.accordion__heading::after {
+  content: "+";
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.accordion-item.active .accordion__heading::after {
+  content: "-";
+}
+
+.accordion-item.active .accordion__content {
+  max-height: 9999px;
 }

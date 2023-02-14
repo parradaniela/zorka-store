@@ -60,15 +60,52 @@
         <section class="carousel">
             <div class="carousel__container">
                 <div class="carousel__container--teaser wrapper">
-                    <div class="carousel__content--teaser">
+                    <!-- TabPanel start -->
+                    <div 
+                    class="carousel__content--teaser"
+                    id="panel-1"
+                    role="tabpanel"
+                    tabindex="0"
+                    aria-labelledby="tab-1">
                         <h2 class="heading__section">Zorka Clothing</h2>
                         <h3 class="heading__collection">A Daisy Lady</h3>
                         <a href="#" class="btn btn-white">Shop Now</a>
                     </div>
-                    <div class="carousel__content--teaser-toggle">
-                        <button>1</button>
-                        <button>2</button>
-                        <button>3</button>
+                    <!-- Tablist start -->
+                    <div 
+                        class="carousel__content--teaser-toggle" 
+                        role="tablist" 
+                        aria-label="Featured Collection Tabs">
+                        <button 
+                            role="tab"
+                            aria-selected="true"
+                            aria-controls="panel-1"
+                            id="tab-1"
+                            tabindex="0">
+                            <span class="sr-only">
+                                View the first featured collection
+                            </span>
+                        </button>
+                        <button
+                            role="tab"
+                            aria-selected="false"
+                            aria-controls="panel-2"
+                            id="tab-2"
+                            tabindex="-1">
+                            <span class="sr-only">
+                                View the second featured collection
+                            </span>
+                        </button>
+                        <button 
+                            role="tab"
+                            aria-selected="false"
+                            aria-controls="panel-3"
+                            id="tab-3"
+                            tabindex="-1">
+                            <span class="sr-only">
+                                View the third featured collection
+                            </span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -529,53 +566,69 @@
 
     <footer class="section-padding">
         <div class="wrapper">
-            <nav class="footer__navigation flex-wrap-center">
-                <div class="footer__navigation-segment">
-                    <h3>Location</h3>
-                    <address class="flex-col-center">
-                        <p>580, Broadway, 10012 - New York</p>
-                        <p>NY - U</p>
-                        <p>Tel. +1 2123431725</p>
-                        <p>Email: info@thememove.com</p>
-                    </address>
-                    <div class="socials">
-                        <!-- Social icons go here -->
+            <nav class="flex-wrap-center">
+                <div class="accordion-item">
+                    <div class="accordion__heading">
+                        <h3>Location</h3>
+                    </div>
+                    <div class="accordion__content">
+                        <address class="flex-col-center">
+                            <p>580, Broadway, 10012 - New York</p>
+                            <p>NY - U</p>
+                            <p>Tel. +1 2123431725</p>
+                            <p>Email: info@thememove.com</p>
+                        </address>
+                        <div class="socials">
+                            <!-- Social icons go here -->
+                        </div>
                     </div>
                 </div>
-                <div class="footer__navigation-segment">
-                    <h3>Help</h3>
-                    <ul class="flex-col-center">
-                        <li><a href="#">How to Buy</a></li>
-                        <li><a href="#">General Information</a></li>
-                        <li><a href="#">Payment</a></li>
-                        <li><a href="#">Shipping</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">Exchanges</a></li>
-                        <li><a href="#">Gift Card</a></li>
-                        <li><a href="#">My Account</a></li>
-                        <li><a href="#">Watches</a></li>
-                    </ul>
+                <div class="accordion-item">
+                    <div class="accordion__heading">
+                        <h3>Help</h3>
+                    </div>
+                    <div class="accordion__content">
+                        <ul class="flex-col-center">
+                            <li><a href="#">How to Buy</a></li>
+                            <li><a href="#">General Information</a></li>
+                            <li><a href="#">Payment</a></li>
+                            <li><a href="#">Shipping</a></li>
+                            <li><a href="#">Returns</a></li>
+                            <li><a href="#">Exchanges</a></li>
+                            <li><a href="#">Gift Card</a></li>
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Watches</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="footer__navigation-segment">
-                    <h3>Policies</h3>
-                    <ul class="flex-col-center">
-                        <li><a href="#">Environmental Policy</a></li>
-                        <li><a href="#">Animal Welfare</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Purchase Conditions</a></li>
-                        <li><a href="#">Gift Card Conditions</a></li>
-                        <li><a href="#">Warranty on Watches</a></li>
-                    </ul>
+                <div class="accordion__content">
+                    <div class="accordion__heading">
+                        <h3>Policies</h3>
+                    </div>
+                    <div class="accordion__content">
+                        <ul class="flex-col-center">
+                            <li><a href="#">Environmental Policy</a></li>
+                            <li><a href="#">Animal Welfare</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Purchase Conditions</a></li>
+                            <li><a href="#">Gift Card Conditions</a></li>
+                            <li><a href="#">Warranty on Watches</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="footer__navigation-segment">
-                    <h3>Company</h3>
-                    <ul class="flex-col-center">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Offices</a></li>
-                        <li><a href="#">Stores</a></li>
-                        <li><a href="#">Work with us</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
+                <div class="accordion-item">
+                    <div class="accordion__heading">
+                        <h3>Company</h3>
+                    </div>
+                    <div class="accordion__content">
+                        <ul class="flex-col-center">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Offices</a></li>
+                            <li><a href="#">Stores</a></li>
+                            <li><a href="#">Work with us</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
 
@@ -597,5 +650,6 @@
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./scripts/app.js"></script>
 </body>
 </html>

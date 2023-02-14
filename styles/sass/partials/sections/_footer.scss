@@ -4,9 +4,15 @@ footer {
     background-color: v.$color-grey-light;
 }
 
-.footer__navigation-segment {
+
+.copyright {
+    gap: 2rem;
+    //TODO: when the images and text go onto one line, change justify content to space between
+}
+
+.accordion-item {
     flex-basis: 100%;
-    
+
     h3 {
         margin: 2rem 0;
         text-transform: uppercase;
@@ -25,7 +31,30 @@ footer {
     }
 }
 
-.copyright {
-    gap: 2rem;
-    //TODO: when the images and text go onto one line, change justify content to space between
+.accordion__heading {
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+        content: '+';
+        font-size: 2rem;
+        position: absolute;
+        top: 50%;
+        right: 10%;
+        transform: translateY(-50%);
+    }
+}
+
+.accordion__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.accordion-item.active .accordion__heading::after {
+    content: '-';
+}
+
+.accordion-item.active .accordion__content {
+    max-height: 9999px;
 }
