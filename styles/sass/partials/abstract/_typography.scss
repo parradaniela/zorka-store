@@ -29,7 +29,7 @@ h2, h4, h5, p, button, input, li, a {
     transition: all .3s;
 }
 
-h3, legend {
+h3, legend, label {
     //TODO: change most H3s to a subheading p element instead, and style h3s for the footer instead
     font-family: 'Merriweather', sans-serif;
     font-style: italic;
@@ -47,7 +47,7 @@ h2 {
     line-height: 1.5;
 }
 
-h3, h4, h5, p, input, a, button {
+h3, h4, h5, p, input, a, button, label {
     font-size: 2rem;
 }
 

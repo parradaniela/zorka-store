@@ -29,3 +29,33 @@ footer {
     gap: 2rem;
     //TODO: when the images and text go onto one line, change justify content to space between
 }
+
+.accordion__item--heading {
+    display: flex;
+    justify-content: space-between;
+
+    ion-icon {
+        color: black;
+        font-size: 2rem;
+        transform: rotate(90deg);
+    }
+}
+
+.arrow {
+    transform: rotateX(90deg);
+    color: black;
+}
+
+.accordion__item--checkbox {
+    display: none;
+
+    &:checked + .accordion__item--content {
+        max-height: 9999px;
+    }
+}
+
+.accordion__item--content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease-in-out;
+} 

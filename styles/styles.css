@@ -230,13 +230,13 @@ html {
   font-size: 62.5%;
 }
 
-body {
-  text-align: center;
-}
-
-h1, h2, h3, h4, h5, p, ul, button, input, fieldset {
+* {
   margin: 0;
   padding: 0;
+}
+
+body {
+  text-align: center;
 }
 
 li {
@@ -399,7 +399,7 @@ h2, h4, h5, p, button, input, li, a {
   transition: all 0.3s;
 }
 
-h3, legend {
+h3, legend, label {
   font-family: "Merriweather", sans-serif;
   font-style: italic;
   font-weight: light;
@@ -417,7 +417,7 @@ h2 {
   line-height: 1.5;
 }
 
-h3, h4, h5, p, input, a, button {
+h3, h4, h5, p, input, a, button, label {
   font-size: 2rem;
 }
 
@@ -826,7 +826,7 @@ header {
 .updates {
   gap: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 .updates__container {
   border: 1px solid #ca7379;
@@ -840,7 +840,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   gap: 2rem;
-  padding: 2rem;
+  padding: 1rem;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
 }
@@ -869,4 +869,39 @@ footer {
 
 .copyright {
   gap: 2rem;
+}
+
+.accordion__item--heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.accordion__item--heading ion-icon {
+  color: black;
+  font-size: 2rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.arrow {
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+  color: black;
+}
+
+.accordion__item--checkbox {
+  display: none;
+}
+.accordion__item--checkbox:checked + .accordion__item--content {
+  max-height: 9999px;
+}
+
+.accordion__item--content {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out;
 }

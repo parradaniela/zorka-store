@@ -529,22 +529,29 @@
 
     <footer class="section-padding">
         <div class="wrapper">
-            <nav class="footer__navigation flex-wrap-center">
-                <div class="footer__navigation-segment">
-                    <h3>Location</h3>
-                    <address class="flex-col-center">
+            <nav class="footer__navigation flex-wrap-center accordion">
+                <div class="footer__navigation-segment accordion__item">
+                    <!-- <div class="accordion__heading"> -->
+                    <label for="location" class="accordion__item--heading">Location <span class="arrow">&#x3e;</span></label>
+                    <input type="checkbox" name="accordion" id="location" class="accordion__item--heading-checkbox">
+                    <!-- </div> -->
+                    <address class="flex-col-center accordion__item--content">
                         <p>580, Broadway, 10012 - New York</p>
                         <p>NY - U</p>
-                        <p>Tel. +1 2123431725</p>
-                        <p>Email: info@thememove.com</p>
+                        <p>Tel. <a href="tel:1 2123431725">+1 2123431725</a></p>
+                        <p>Email: <a href="emailto:info@thememove.com">info@thememove.com</a></p>
                     </address>
                     <div class="socials">
                         <!-- Social icons go here -->
                     </div>
                 </div>
                 <div class="footer__navigation-segment">
-                    <h3>Help</h3>
-                    <ul class="flex-col-center">
+                    <div class="accordion__item--heading">
+                        <label for="help" class="accordion__item--heading">Help <ion-icon name="chevron-forward-outline"></ion-icon></label> 
+                        
+                    </div>
+                    <input type="checkbox" name="accordion" id="help" class="accordion__item--checkbox">
+                    <ul class="flex-col-center accordion__item--content">
                         <li><a href="#">How to Buy</a></li>
                         <li><a href="#">General Information</a></li>
                         <li><a href="#">Payment</a></li>
@@ -557,8 +564,9 @@
                     </ul>
                 </div>
                 <div class="footer__navigation-segment">
-                    <h3>Policies</h3>
-                    <ul class="flex-col-center">
+                    <label for="policies" class="accordion__item--heading">Policies <span class="arrow">&#x3e;</span></label>
+                    <input type="checkbox" name="accordion" id="policies" class="accordion__item--heading-checkbox">
+                    <ul class="flex-col-center accordion__item--content">
                         <li><a href="#">Environmental Policy</a></li>
                         <li><a href="#">Animal Welfare</a></li>
                         <li><a href="#">Privacy Policy</a></li>
@@ -568,8 +576,9 @@
                     </ul>
                 </div>
                 <div class="footer__navigation-segment">
-                    <h3>Company</h3>
-                    <ul class="flex-col-center">
+                    <label for="company" class="accordion__item--heading">Company <span class="arrow">&#x3e;</span></label>
+                    <input type="checkbox" name="accordion" id="company" class="accordion__item--heading-checkbox">
+                    <ul class="flex-col-center accordion__item--content">
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Offices</a></li>
                         <li><a href="#">Stores</a></li>
