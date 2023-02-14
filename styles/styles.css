@@ -493,6 +493,18 @@ header {
   padding: 2rem;
   margin-top: 10%;
 }
+.carousel__content--teaser-toggle button {
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 5px;
+}
+.carousel__content--teaser-toggle button:not(:last-child) {
+  margin-right: 5px;
+}
+.carousel__content--teaser-toggle button:is(:hover, :focus, :active) {
+  background-color: #fff;
+}
 
 .promotions {
   display: -webkit-box;
@@ -849,21 +861,25 @@ footer {
   background-color: #fafafa;
 }
 
-.footer__navigation-segment {
+.copyright {
+  gap: 2rem;
+}
+
+.accordion-item {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
 }
-.footer__navigation-segment h3 {
+.accordion-item h3 {
   margin: 2rem 0;
   text-transform: uppercase;
 }
-.footer__navigation-segment a {
+.accordion-item a {
   text-transform: uppercase;
 }
-.footer__navigation-segment a:is(:hover, :focus) {
+.accordion-item a:is(:hover, :focus) {
   color: #ca7379;
 }
-.footer__navigation-segment ul, .footer__navigation-segment address {
+.accordion-item ul, .accordion-item address {
   gap: 1rem;
 }
 
@@ -871,37 +887,31 @@ footer {
   gap: 2rem;
 }
 
-.accordion__item--heading {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.accordion__heading {
+  position: relative;
+  cursor: pointer;
 }
-.accordion__item--heading ion-icon {
-  color: black;
+.accordion__heading::after {
+  content: "+";
   font-size: 2rem;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
-.arrow {
-  -webkit-transform: rotateX(90deg);
-          transform: rotateX(90deg);
-  color: black;
-}
-
-.accordion__item--checkbox {
-  display: none;
-}
-.accordion__item--checkbox:checked + .accordion__item--content {
-  max-height: 9999px;
-}
-
-.accordion__item--content {
+.accordion__content {
   max-height: 0;
   overflow: hidden;
-  -webkit-transition: max-height 0.5s ease-in-out;
-  transition: max-height 0.5s ease-in-out;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.accordion-item.active .accordion__heading::after {
+  content: "-";
+}
+
+.accordion-item.active .accordion__content {
+  max-height: 9999px;
 }

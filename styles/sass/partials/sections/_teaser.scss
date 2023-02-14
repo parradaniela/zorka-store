@@ -29,5 +29,21 @@
         align-self: flex-end;
         padding: 2rem;
         margin-top: 10%;
+
+        button {
+            background: transparent;
+            border: 2px solid v.$color-white;
+            border-radius: 50%;
+            padding: 5px;
+
+            &:not(:last-child) {
+                margin-right: 5px;
+            }
+
+            &:is(:hover, :focus, :active) {
+                // border: 2px solid v.$color-grey-dark;
+                background-color: v.$color-white;
+            }
+        }
     }
 }

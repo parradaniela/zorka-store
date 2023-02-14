@@ -4,9 +4,14 @@ footer {
     background-color: v.$color-grey-light;
 }
 
-.footer__navigation-segment {
+.copyright {
+    gap: 2rem;
+    //TODO: when the images and text go onto one line, change justify content to space between
+}
+
+.accordion-item {
     flex-basis: 100%;
-    
+
     h3 {
         margin: 2rem 0;
         text-transform: uppercase;
@@ -29,33 +34,30 @@ footer {
     gap: 2rem;
     //TODO: when the images and text go onto one line, change justify content to space between
 }
+.accordion__heading {
+    position: relative;
+    cursor: pointer;
 
-.accordion__item--heading {
-    display: flex;
-    justify-content: space-between;
-
-    ion-icon {
-        color: black;
+    &::after {
+        content: '+';
         font-size: 2rem;
-        transform: rotate(90deg);
+        position: absolute;
+        top: 50%;
+        right: 10%;
+        transform: translateY(-50%);
     }
 }
 
-.arrow {
-    transform: rotateX(90deg);
-    color: black;
-}
-
-.accordion__item--checkbox {
-    display: none;
-
-    &:checked + .accordion__item--content {
-        max-height: 9999px;
-    }
-}
-
-.accordion__item--content {
+.accordion__content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height .5s ease-in-out;
-} 
+    transition: all .5s;
+}
+
+.accordion-item.active .accordion__heading::after {
+    content: '-';
+}
+
+.accordion-item.active .accordion__content {
+    max-height: 9999px;
+}
