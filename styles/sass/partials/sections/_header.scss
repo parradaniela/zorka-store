@@ -1,3 +1,20 @@
-header {
-    display: none;
+@use '../abstract/variables' as v;
+
+.header__socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+.socmed-icon {
+    fill: v.$color-grey;
+    width: 40%;
+    max-height: 10rem;
+    font-size: 3rem;
+    transition: all .3s;
+
+    &:is(:hover, :focus) {
+        fill: v.$color-primary;
+    }
 }

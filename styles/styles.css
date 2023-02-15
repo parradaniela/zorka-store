@@ -276,6 +276,21 @@ fieldset, input {
   margin: 0 auto;
 }
 
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  z-index: 10;
+  background-color: #F5F5F5;
+  color: #151514;
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+.skip-link:focus {
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
 .rel-container {
   position: relative;
 }
@@ -444,8 +459,29 @@ ion-icon {
   font-size: 1.8rem;
 }
 
-header {
-  display: none;
+.header__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5%;
+}
+
+.socmed-icon {
+  fill: #ccc;
+  width: 40%;
+  max-height: 10rem;
+  font-size: 3rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.socmed-icon:is(:hover, :focus) {
+  fill: #ca7379;
 }
 
 .carousel__container {
