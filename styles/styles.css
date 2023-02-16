@@ -381,6 +381,19 @@ fieldset, input {
 .btn__product:is(:hover, :focus-within) .icon-grey {
   color: #ca7379;
 }
+.btn__toggle {
+  border: none;
+  background: transparent;
+  padding: 1rem;
+  cursor: pointer;
+}
+.btn__toggle ion-icon {
+  font-size: 4rem;
+  color: #444;
+}
+.btn__toggle ion-icon:is(:hover, :focus) {
+  color: #ca7379;
+}
 
 .icon-grey {
   color: #444;
@@ -459,6 +472,42 @@ ion-icon {
   font-size: 1.8rem;
 }
 
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__heading {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+.header__toggle {
+  z-index: 20;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+}
+.header__mobile-fixed {
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  right: 100%;
+  padding-top: 20%;
+  min-height: 100vh;
+  z-index: 10;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.header__mobile-fixed.active {
+  right: 0;
+}
 .header__socials {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -471,9 +520,20 @@ ion-icon {
           align-items: center;
   padding: 5%;
 }
+.header__cart {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+.header .rel-container {
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
 
 .socmed-icon {
-  fill: #ccc;
+  fill: #444;
   width: 40%;
   max-height: 10rem;
   font-size: 3rem;

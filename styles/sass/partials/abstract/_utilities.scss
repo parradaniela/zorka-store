@@ -101,6 +101,23 @@
         }
     }
 
+    &__toggle {
+        border: none;
+        background: transparent;
+        padding: 1rem;
+        cursor: pointer;
+        
+        ion-icon {
+            font-size: 4rem;
+            color: v.$color-grey-dark;
+            
+            &:is(:hover, :focus) {
+                color: v.$color-primary;
+            }
+        }
+
+    }
+
 
 }
 

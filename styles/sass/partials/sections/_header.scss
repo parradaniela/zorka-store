@@ -1,14 +1,53 @@
 @use '../abstract/variables' as v;
 
-.header__socials {
+.header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 5%;
+
+    &__heading {
+        order: 1;
+    }
+
+    &__toggle {
+        z-index: 20;
+        order: 0;
+    }
+
+    &__mobile-fixed {
+        position: fixed;
+        background-color: v.$color-white;
+        top: 0;
+        right: 100%;
+        padding-top: 20%;
+        min-height: 100vh;
+        z-index: 10;
+        transition: all .4s;
+
+        &.active {
+            right: 0;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5%;
+    }
+
+    &__cart {
+        flex-basis: 20%;
+    }
+
+    .rel-container {
+        flex-basis: 80%;
+        justify-content: space-evenly;
+    }
 }
 
 .socmed-icon {
-    fill: v.$color-grey;
+    fill: v.$color-grey-dark;
     width: 40%;
     max-height: 10rem;
     font-size: 3rem;
